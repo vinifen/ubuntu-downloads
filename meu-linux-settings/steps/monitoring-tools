@@ -1,0 +1,13 @@
+Ferramentas de monitoramento:
+
+> Instalar Psensor: $ sudo apt install psensor
+
+> instalar smartctl: $ sudo apt install smartmontools
+
+> Instalar ls_sensors: $ sudo apt install lm-sensors
+	>> Comandos uteis: $ sudo sensors-detect  $ sensors
+	
+> Instalar nvme-cli: $ sudo apt install nvme-cli
+	>> Comando util: $ sudo nvme smart-log /dev/nvme0n1
+
+

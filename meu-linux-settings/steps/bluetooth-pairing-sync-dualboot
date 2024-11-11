@@ -1,0 +1,22 @@
+>Configurar Bluetooth device pairing (fazer isso se estiver usando dual boot)
+	>> video principal: https://www.youtube.com/watch?v=GNmUvL5ob0w
+	>> video secundario: https://www.youtube.com/watch?v=BprSnu6KWTA&list=PL-VFBFCsVFb3TuZJThYVeFx3HFt9DNa9N
+	
+	>> Parear primeiro o bluetooth no Windonws e depois tentar conectar no Linux (não vai funcionar o dispositivo)
+	>> $ sudo apt install chntpw
+	>> $ cd ...(descobrir endereco certo)/Windows/System32/config 
+	>> $ chntpw -e SYSTEM
+	>> $ dir
+	>> $ cd ControlSet001	$ dir
+	>> $ cd Services	$ dir
+	>> $ cd BTHPORT		$ dir
+	>> $ cd Parameters	$ dir
+	>> $ cd Keys		$ dir
+	>> $ cd (key name que aparecer com $ dir) $ dir
+	>> $ hex (value name)
+	>> copiar somente código com esse padrao  ¨XX XX XX XX ¨ depois de ¨data length 16 [0x10]:¨
+	
+	>> (em outro terminal) $ sudo vim /var/lib/bluetooth/
+	>> entrar no endereco, depois entrar no endereco de novo 
+	>> entrar em info
+	>> Mudar Key= em [LinkKey] para o codigo copiado (939B2C9A3EE51EA95D96BA38CF34B896), sem espacos

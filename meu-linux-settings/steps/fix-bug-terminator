@@ -1,0 +1,18 @@
+Arrumar bug do terminator:
+
+$ sudo vim /etc/lib/terminator
+
+Abaixo de:
+¨import terminatorlib.optionparse
+ from terminatorlib.terminator import Terminator
+ from terminatorlib.factory import Factory
+ from terminatorlib.version import APP_NAME, APP_VERSION
+ from terminatorlib.util import dbg, err
+ from terminatorlib.layoutlauncher import LayoutLauncher
+ from terminatorlib.configjson import ConfigJson¨
+ 
+ Adicionar:
+ os.environ['DBUS_SESSION_BUS_ADDRESS']=''
+
+
+

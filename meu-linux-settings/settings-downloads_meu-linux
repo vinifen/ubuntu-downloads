@@ -1,0 +1,55 @@
+Downloads e configuracões feitas para meu ambiente Linux:
+ 
+> Ajustar tempo (evitar problema com dualboot): 
+	>> $ sudo timedatectl set-local-rtc 1 --adjust-system-clock
+	>> https://www.youtube.com/watch?v=3ieh2zY1qsM
+	
+> Baixar Vim: $ sudo apt install vim 
+
+> Configurar Bluetooth device pairing (fazer isso se estiver usando dual boot)
+	>> Seguir o arquivo em /steps/bluetooth-pairing-sync-dualboot
+	
+> Multipass: $ sudo snap install multipass
+> resolvconf: $ sudo apt install resolvconf
+	
+> Draw.io: em https://www.drawio.com/ baixar .deb
+	>> $ sudo dpkg --install (.deb do app em Downloads) 
+	
+> Terminator: $ sudo apt install terminator 
+	>> Consertar bug terminator em /steps/fix-bug-terminator 
+	
+> Instalar ferramentas de monitoramento extras (opcional):
+	>> Checar /steps/monitoring-tools
+	
+> Vscode: em https://code.visualstudio.com/download baixar .deb
+	>> $ sudo dpkg --install (.deb do app em Downloads)
+	>> Configurar vscode em /steps/vscode-config
+
+> Chrome: baixar chrome em .deb 
+	>> $ sudo dpkg --install (.deb do app em Downloads)
+	
+> Discord: baixar discord https://discord.com/download .deb
+	>> $ sudo dpkg --install (.deb do app em Downloads)
+> nodejs: $ sudo apt install nodejs
+
+> npm: $ sudo apt install npm
+
+> typescript: sudo npm install typescript -g
+
+> ts-node: $ sudo npm install -g ts-node ($ tsc --init no projeto para funcionar)
+
+> angular: sudo npm install -g @angular/cli
+
+> git flow: sudo apt-get install git-flow
+
+> xampp: instalar no site https://www.apachefriends.org/pt_br/index.html
+	>> $ cd ~/Downloads
+	>> $ chmod +x xampp-linux-x64-(versao)-installer.run 
+ 	>> $ sudo ./xampp-linux-x64-(versao)-installer.run
+ 	>> comandos extras uteis: 
+ 	>>> $ sudo /opt/lampp/manager-linux-x64.run
+	>>> $ sudo /opt/lampp/lampp start
+
+> docker: $ sudo apt install docker.io
+	>> Criar container mysql apache:
+	>>> $ sudo docker run -d -p 80:80 -p 3306:3306 --name lamp-server -v $(pwd)/www:/var/www/html webdevops/php-apache-mysql
